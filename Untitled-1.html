@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your way to Ukraine\\</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <style>/* ======= Основні кольори ======= */
+:root {
+  --blue: #004aad;
+  --yellow: #ffd500;
+  --light-bg: #f8fafc;
+  --text-dark: #1a1a1a;
+  --text-muted: #6c757d;
+}
+
+/* ======= Загальні стилі ======= */
+body {
+  background-color: #ffffff;
+  color: var(--text-dark);
+  scroll-behavior: smooth;
+  font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+/* ======= Navbar ======= */
+.navbar {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: background 0.3s ease;
+}
+
+.navbar-brand {
+  color: var(--blue) !important;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.nav-link {
+  color: var(--text-dark) !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--blue) !important;
+}
+
+/* ======= Кнопки ======= */
+.btn-danger {
+  background-color: var(--blue);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: #003b8a;
+  transform: translateY(-2px);
+}
+
+.btn-outline-danger {
+  border-color: var(--blue);
+  color: var(--blue);
+  transition: all 0.3s ease;
+}
+
+.btn-outline-danger:hover {
+  background-color: var(--blue);
+  color: #fff;
+}
+
+/* ======= Hero Section ======= */
+#hero {
+  background: linear-gradient(90deg, #ffffff 0%, #f5f8ff 100%);
+  animation: fadeIn 1.2s ease;
+}
+
+.hero-image {
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ======= Про Україну ======= */
+#about img {
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ======= Features Section ======= */
+#features .col-md-6 .d-flex {
+  border: 1px solid #e5e5e5;
+  transition: all 0.3s ease;
+}
+
+#features .col-md-6 .d-flex:hover {
+  background-color: #f8faff;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* ======= Pricing Cards ======= */
+.card {
+  border-radius: 18px;
+  border: none;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* ======= FAQ ======= */
+.faq-item {
+  background-color: #fff;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  background-color: #f9f9ff;
+}
+
+form {
+  background-color: #f8faff;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+form:focus-within {
+  box-shadow: 0 0 0 4px rgba(0, 74, 173, 0.2);
+}
+#newsletter {
+  background: linear-gradient(180deg, #ffffff 0%, #f4f7ff 100%);
+}
+#newsletter .btn {
+  background-color: var(--yellow);
+  border: none;
+  color: #000;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+#newsletter .btn:hover {
+  background-color: #e6c100;
+}
+
+footer {
+  background-color: var(--light-bg);
+  color: var(--text-muted);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="80" tabindex="0">
+
+  <!-- ======= Navbar ======= -->
+  <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand text-dark fs-2 fw-bold" href="#">Your way to Ukraine</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active text-danger" href="#hero">Головна</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Про Україну</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">Місця</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing">Тури</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Контакти</a></li>
+          <li class="nav-item">
+            <a href="#contact" class="btn btn-danger rounded-pill py-2 px-3 fw-semibold ms-lg-3 mt-2 mt-lg-0">
+              Забронювати
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="container bg-white py-5 min-vh-100 d-flex align-items-center">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 text-center text-lg-start">
+        <h1 class="display-3 fw-bold mb-4">Подорож до України</h1>
+        <p class="lead mb-5 text-secondary">Відвідайте найвідоміші місця, насолоджуйтесь культурою, кухнею та історією України.</p>
+        <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start align-items-center">
+          <a href="#pricing" class="btn btn-danger rounded-pill py-2 px-3 fw-semibold me-sm-3 mb-3 mb-sm-0 icon-link icon-link-hover">
+            Дізнатись Більше <i class="bi bi-arrow-right ms-2 mb-2"></i>
+          </a>
+          <a href="#" class="text-decoration-none d-flex align-items-center text-dark">
+            <span class="btn rounded-circle border-3 border-danger d-flex align-items-center justify-content-center me-2" style="width:40px; height:40px;">
+              <i class="bi bi-play-fill text-danger fs-3"></i>
+            </span>
+            Переглянути відео
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-6 d-flex justify-content-center">
+        <img src="https://www.nastol.com.ua/pic/202305/1920x1080/nastol.com.ua-526556.jpg" class="img-fluid rounded hero-image" alt="Україна">
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="bg-white py-5">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="badge text-danger-emphasis bg-danger-subtle rounded-pill mb-2 px-3 py-2">Про Україну</span>
+          <h2 class="display-5 fw-bold">Україна — країна гарних пейзажів</h2>
+          <p class="mt-4 text-secondary">Україна пропонує унікальне поєднання історичних пам’яток, .</p>
+          <a href="#features" class="btn btn-danger rounded-pill py-2 px-3 fw-semibold mt-4 icon-link icon-link-hover">
+            Дослідити <i class="bi bi-arrow-right ms-2 mb-2"></i>
+          </a>
+        </div>
+        <div class="col-lg-6">
+          <img src="https://www.rbc.ua/static/img/_/b/_batkivshchina_mati_prapor_ukrayini_kiyiv_gettyimages_1582680334_0940a90485a28729de6e7a3bf8a3721f_650x410.jpg">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ======= Features Section ======= -->
+  <section id="features" class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="badge text-danger-emphasis bg-danger-subtle rounded-pill mb-2 px-3 py-2">Місця</span>
+        <h2 class="h1 fw-bold text-dark">Що варто побачити в Україні</h2>
+      </div>
+
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <img src="https://vartonews.com.ua/wp-content/uploads/2023/01/50adc8625b5f1573af5ac947a3e51499_edited.jpg" class="img-fluid rounded" alt="Карпати">
+        </div>
+        <div class="col-lg-6">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="d-flex align-items-center p-3 rounded-4 bg-white shadow-sm h-100">
+                <i class="bi bi-check-lg fs-4 text-danger me-3"></i>
+                <h5 class="mb-0 fw-bold">Карпати</h5>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex align-items-center p-3 rounded-4 bg-white shadow-sm h-100">
+                <i class="bi bi-camera fs-4 text-danger me-3"></i>
+                <h5 class="mb-0 fw-bold">Одеса</h5>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex align-items-center p-3 rounded-4 bg-white shadow-sm h-100">
+                <i class="bi bi-brightness-high fs-4 text-danger me-3"></i>
+                <h5 class="mb-0 fw-bold">Вінниця</h5>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex align-items-center p-3 rounded-4 bg-white shadow-sm h-100">
+                <i class="bi bi-map fs-4 text-danger me-3"></i>
+                <h5 class="mb-0 fw-bold">Львів</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Pricing Section ======= -->
+  <section id="pricing" class="bg-white py-5">
+    <div class="container text-center">
+      <span class="badge text-danger-emphasis bg-danger-subtle rounded-pill px-3 py-2 mb-2">Тури</span>
+      <h2 class="h1 fw-bold text-dark mb-5">Обери свій тур</h2>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-3 col-md-6">
+          <div class="card h-100 border-0 shadow-sm rounded-4 text-center">
+            <div class="card-body p-4">
+              <div class="fs-1 text-success mb-3"><i class="bi bi-box"></i></div>
+              <h4 class="fw-bold text-success">Безкоштовно</h4>
+              <div class="d-flex justify-content-center align-items-baseline my-3">
+                <span class="h1 fw-bold text-dark">$0</span><span class="text-secondary">/міс</span>
+              </div>
+              <ul class="list-unstyled mb-4 text-secondary">
+                <li>Самостійні маршрути</li>
+                <li class="text-decoration-line-through">Гід</li>
+              </ul>
+              <a href="#" class="btn btn-outline-success rounded-pill px-5">Обрати</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="card h-100 border-0 shadow-lg rounded-4 text-center">
+            <div class="card-body p-4">
+              <div class="fs-1 text-danger mb-3"><i class="bi bi-send"></i></div>
+              <h4 class="fw-bold text-danger">Класичний тур</h4>
+              <div class="d-flex justify-content-center align-items-baseline my-3">
+                <span class="h1 fw-bold text-dark">$150</span><span class="text-secondary">/міс</span>
+              </div>
+              <ul class="list-unstyled mb-4 text-secondary">
+                <li>Груповий тур</li>
+                <li>Гід та трансфер</li>
+              </ul>
+              <a href="#" class="btn btn-outline-danger rounded-pill px-5">Купити</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ======= FAQ Section ======= -->
+  <section id="faq" class="py-5">
+    <div class="container">
+        
+      <div class="text-center mb-5">
+        <span class="badge text-danger-emphasis bg-danger-subtle rounded-pill px-3 py-2 mb-2">FAQ</span>
+        <h2 class="h1 fw-bold text-dark">Часті питання</h2>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-6">
+          <div class="faq-item p-3 border-bottom border-secondary">
+            <h3 class="d-flex justify-content-between align-items-center fs-5 fw-semibold mb-0" data-bs-toggle="collapse" data-bs-target="#faq1">
+              Як забронювати тур? <i class="bi bi-chevron-right text-danger fs-5"></i>
+            </h3>
+            <div id="faq1" class="collapse faq-answer">
+              <p class="mb-0 mt-2 text-secondary fs-6">Натисніть "Забронювати" та заповніть форму на сайті.</p>
+            </div>
+          </div>
+          <div class="faq-item p-3 border-bottom border-secondary">
+            <h3 class="d-flex justify-content-between align-items-center fs-5 fw-semibold mb-0" data-bs-toggle="collapse" data-bs-target="#faq2">
+              Чи можна скасувати бронювання? <i class="bi bi-chevron-right text-danger fs-5"></i>
+            </h3>
+            <div id="faq2" class="collapse faq-answer">
+              <p class="mb-0 mt-2 text-secondary fs-6">Так, скасування доступне за 48 годин до поїздки.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="faq" class="py-5">
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-6">
+          <div class="faq-item p-3 border-bottom border-secondary">
+            <h3 class="d-flex justify-content-between align-items-center fs-5 fw-semibold mb-0" data-bs-toggle="collapse" data-bs-target="#faq1">
+            Чи повертають кошти,якщо не змогли добратися? <i class="bi bi-chevron-right text-danger fs-5"></i>
+            </h3>
+            <div id="faq1" class="collapse faq-answer">
+              <p class="mb-0 mt-2 text-secondary fs-6">Так впевних життєвих ситуаціях повертають.</p>
+            </div>
+          </div>
+          <div class="faq-item p-3 border-bottom border-secondary">
+            <h3 class="d-flex justify-content-between align-items-center fs-5 fw-semibold mb-0" data-bs-toggle="collapse" data-bs-target="#faq2">
+              На скільки днів тур? <i class="bi bi-chevron-right text-danger fs-5"></i>
+            </h3>
+            <div id="faq2" class="collapse faq-answer">
+              <p class="mb-0 mt-2 text-secondary fs-6">Н 5 днів.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="bg-white py-5">
+    <div class="container">
+      <div class="text-center mb-5"  >
+        <span class="badge text-danger-emphasis bg-danger-subtle rounded-pill mb-2 px-3 py-2">Контакти</span>
+        <h2 class="h1 fw-bold text-dark">Зв’яжіться з нами</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <div class="card border-0 shadow-sm rounded-4 p-4 text-center">
+            <div class="icon d-inline-flex justify-content-center align-items-center rounded-3 bg-danger-subtle text-danger mb-3" style="width: 50px; height: 50px;">
+              <i class="bi bi-geo-alt fs-4"></i>
+            </div>
+            <h5 class="fw-bold text-dark">Адреса</h5>
+            <p class="mb-0 text-secondary">Карпати Україна</p>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <form class="p-4 bg-light rounded-4 shadow-sm">
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Ваше ім’я" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Ваш Email" required>
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" rows="4" placeholder="Повідомлення"></textarea>
+            </div>
+            <button class="btn btn-danger rounded-pill px-4 py-2">Надіслати</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ======= Newsletter ======= -->
+  <section id="newsletter" class="py-5 bg-body-tertiary text-center">
+    <div class="container col-lg-6">
+      <h4 class="fw-bold text-dark">Підписатись на новини</h4>
+      <p class="text-secondary">Отримуйте актуальну інформацію та спеціальні пропозиції першими.</p>
+      <form class="mt-4">
+        <div class="input-group">
+          <input type="email" class="form-control" placeholder="Ваш Email" required>
+          <button class="btn btn-danger" type="submit">Підписатися</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="bg-white border-top border-secondary-subtle">
+    <div class="container py-5 text-center text-secondary">
+      &copy; 2025 <strong><span>Your Way to Ukraine</span></strong>. Усі права захищені.
+    </div>
+  </footer>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
